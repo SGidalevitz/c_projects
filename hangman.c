@@ -1,0 +1,14 @@
+#include <stdio.h>
+#define lengthof(list) (sizeof(list) / sizeof(list[0]))
+inline int rand_range(start, end) {
+  int r = rand();
+  return (r % (end - start)) + start;
+}
+
+int main(void) {
+    const char *words[] =  {"Banana", "Purple", "Impact", "Spirit", "Rocket", "Dragon", "Expert", "Circle", "Coffee", "Strong", "Castle", "Candle", "Garden", "Island", "Market", "Mother", "Window", "Doctor", "Friend", "Global", "Camera", "Wisdom", "Career", "Flight", "Potato", "Silver", "Turtle", "Bucket", "Dragon", "Flower", "Spirit", "Wallet", "Father", "Purple", "Planet", "Summer", "Winter", "Circus", "Spring", "Credit", "Gentle", "Guitar", "Market", "Mother", "Rabbit", "Camera", "Strong", "Planet", "Circle", "Dragon", "Island", "Spirit", "Coffee", "Expert", "Window", "Friend", "Purple", "Impact", "Career", "Candle", "Castle", "Market", "Rocket", "Wisdom", "Doctor", "Garden", "Silver", "Turtle", "Bucket", "Flower", "Father", "Winter", "Summer", "Circus", "Spring", "Credit", "Guitar", "Market", "Mother", "Planet", "Rabbit", "Wallet", "Camera", "Circle", "Dragon", "Expert", "Friend", "Impact", "Purple", "Spirit", "Coffee", "Candle", "Castle", "Garden", "Rocket", "Window", "Doctor", "Bucket", "Turtle", "Silver", "Flower", "Father", "Winter", "Summer", "Circus", "Spring", "Credit", "Guitar", "Island", "Market", "Mother", "Planet", "Rabbit", "Wallet", "Camera", "Circle", "Dragon", "Expert", "Friend", "Impact", "Purple", "Spirit", "Coffee", "Candle", "Castle", "Garden", "Rocket", "Window", "Doctor", "Bucket", "Turtle", "Silver", "Flower", "Father", "Winter", "Summer", "Circus", "Spring", "Credit", "Guitar", "Island", "Market", "Mother", "Planet", "Rabbit", "Wallet", "Camera", "Circle", "Dragon", "Expert", "Friend", "Impact", "Purple", "Spirit", "Coffee", "Candle", "Castle", "Garden", "Rocket", "Window", "Doctor", "Bucket", "Turtle", "Silver", "Flower", "Father", "Winter", "Summer", "Circus", "Spring", "Credit", "Guitar", "Island", "Market", "Mother", "Planet", "Rabbit", "Wallet", "Camera", "Circle", "Dragon", "Expert", "Friend", "Impact", "Purple", "Spirit", "Coffee", "Candle", "Castle", "Garden", "Rocket", "Window", "Doctor", "Bucket", "Turtle", "Silver", "Flower", "Father", "Winter", "Summer", "Circus", "Spring", "Credit", "Guitar", "Island", "Market", "Mother", "Planet", "Rabbit", "Wallet", "Camera", "Circle", "Dragon", "Expert", "Friend", "Impact", "Purple", "Spirit", "Coffee", "Candle", "Castle", "Garden", "Rocket", "Window", "Doctor", "Bucket", "Turtle"};
+    //printf("%zu", lengthof(words));
+    char *secretword[6] = words[rand_range(0, lengthof(words))];
+    printf(secretword);
+    return 0;
+}
